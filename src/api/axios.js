@@ -1,11 +1,13 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:8087',
+  baseURL: 'http://localhost:8887',
   headers: {
     'Content-Type': 'application/json',
   },
 });
+
+console.log('Axios baseURL:', api.defaults.baseURL);
 
 // Add token to requests if available
 api.interceptors.request.use((config) => {
